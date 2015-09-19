@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="keypadItems">
+        <item><![CDATA[1 ㄅ]]></item>
+        <item><![CDATA[2 ㄉ]]></item>
+        <item><![CDATA[3 ˇ]]></item>
+        <item><![CDATA[4 ˋ]]></item>
+        <item><![CDATA[5 ㄓ]]></item>
+        <item><![CDATA[6 ˊ]]></item>
+        <item><![CDATA[7 ˙]]></item>
+        <item><![CDATA[8 ㄚ]]></item>
+        <item><![CDATA[9 ㄞ]]></item>
+        <item><![CDATA[0 ㄢ]]></item>
+        <item><![CDATA[q ㄆ]]></item>
+        <item><![CDATA[w ㄊ]]></item>
+        <item><![CDATA[e ㄍ]]></item>
+        <item><![CDATA[r ㄐ]]></item>
+        <item><![CDATA[t ㄔ]]></item>
+        <item><![CDATA[y ㄗ]]></item>
+        <item><![CDATA[u ㄧ]]></item>
+        <item><![CDATA[i ㄛ]]></item>
+        <item><![CDATA[o ㄟ]]></item>
+        <item><![CDATA[p ㄣ]]></item>
+        <item><![CDATA[a ㄇ]]></item>
+        <item><![CDATA[s ㄋ]]></item>
+        <item><![CDATA[d ㄎ]]></item>
+        <item><![CDATA[f ㄑ]]></item>
+        <item><![CDATA[g ㄕ]]></item>
+        <item><![CDATA[h ㄘ]]></item>
+        <item><![CDATA[j ㄨ]]></item>
+        <item><![CDATA[k ㄜ]]></item>
+        <item><![CDATA[l ㄠ]]></item>
+        <item><![CDATA[; ㄤ]]></item>
+        <item><![CDATA[z ㄈ]]></item>
+        <item><![CDATA[x ㄌ]]></item>
+        <item><![CDATA[c ㄏ]]></item>
+        <item><![CDATA[v ㄒ]]></item>
+        <item><![CDATA[b ㄖ]]></item>
+        <item><![CDATA[n ㄙ]]></item>
+        <item><![CDATA[m ㄩ]]></item>
+        <item><![CDATA[, ㄝ]]></item>
+        <item><![CDATA[. ㄡ]]></item>
+        <item><![CDATA[/ ㄥ]]></item>
+        <item><![CDATA[- ㄦ]]></item>
+    </string-array>
+</resources>
