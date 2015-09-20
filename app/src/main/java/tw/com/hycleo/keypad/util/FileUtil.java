@@ -22,7 +22,7 @@ public class FileUtil {
             try {
                 BufferedReader br = new BufferedReader(new FileReader(file));
                 String line = null;
-                while((line = br.readLine()) != null) {
+                while ((line = br.readLine()) != null) {
                     content.add(line);
                 }
                 br.close();
@@ -38,7 +38,7 @@ public class FileUtil {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             String line = null;
-            while((line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null) {
                 content.add(line);
             }
             br.close();

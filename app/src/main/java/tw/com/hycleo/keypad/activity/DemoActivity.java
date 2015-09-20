@@ -6,7 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import tw.com.hycleo.keypad.R;
 import tw.com.hycleo.keypad.view.KeypadView;
 
-public class MainActivity extends ActionBarActivity {
+public class DemoActivity extends ActionBarActivity {
 
     private KeypadView keypadView;
 
