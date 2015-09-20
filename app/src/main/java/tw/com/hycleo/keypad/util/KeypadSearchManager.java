@@ -13,7 +13,7 @@ import tw.com.hycleo.keypad.model.KeypadItem;
  */
 public class KeypadSearchManager {
 
-    public static Map<String, Integer[]> indexMap = new HashMap<>();
+    public static Map<String, MappingIndex> indexMap = new HashMap<>();
 
     private List<String> tableContent;
 
@@ -72,12 +72,12 @@ public class KeypadSearchManager {
         String key = getCurrentKeyId();
         if (key != null && key.length() > 0) {
             List<String> content = tableContent;
-            Integer[] indexs = indexMap.get(key);
+            MappingIndex mappingIndex = indexMap.get(key);
             if (key.startsWith(key)) {
-                indexs = indexMap.get(key);
+                mappingIndex = indexMap.get(key);
             }
-            if (indexs != null) {
-                results = content.subList(indexs[0], indexs[1]);
+            if (mappingIndex != null) {
+                results = content.subList(mappingIndex.startIndex, mappingIndex.endIndex);
             } else {
                 results = find(content, key);
             }
@@ -87,19 +87,19 @@ public class KeypadSearchManager {
 
     private List<String> find(List<String> content, String key) {
         List<String> results = new ArrayList<>();
-        Integer[] mappingIndex = new Integer[2];
+        MappingIndex mappingIndex = new MappingIndex();
         Iterator<String> it = content.iterator();
         int index = 0;
         while (it.hasNext()) {
             String value = it.next();
             if (value.startsWith(key)) {
                 results.add(value);
-                if (mappingIndex[0] == null) {
-                    mappingIndex[0] = index;
+                if (mappingIndex.startIndex == null) {
+                    mappingIndex.startIndex = index;
                 }
             } else {
-                if (mappingIndex[0] != null) {
-                    mappingIndex[1] = index - 1;
+                if (mappingIndex.startIndex != null) {
+                    mappingIndex.endIndex = index - 1;
                     indexMap.put(key, mappingIndex);
                     break;
                 }
@@ -122,5 +122,10 @@ public class KeypadSearchManager {
 
     public static interface InputContent {
         public List<String> getTableContent();
+    }
+
+    private class MappingIndex{
+        Integer startIndex;
+        Integer endIndex;
     }
 }

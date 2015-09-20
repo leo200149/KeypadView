@@ -30,6 +30,8 @@ public class KeypadView extends LinearLayout {
             R.id.btn_30, R.id.btn_31, R.id.btn_32, R.id.btn_33, R.id.btn_34, R.id.btn_35, R.id.btn_36, R.id.btn_37, R.id.btn_38, R.id.btn_39,
             R.id.btn_45};
 
+    private LayoutInflater layoutInflater;
+
     private List<KeypadItem> items;
 
     private Map<Button, KeypadItem> buttonMap;
@@ -40,7 +42,7 @@ public class KeypadView extends LinearLayout {
 
     public KeypadView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        layoutInflater = LayoutInflater.from(context);
         layoutInflater.inflate(R.layout.keypad_view, this);
         resultView = (LinearLayout) findViewById(R.id.resultView);
         keypadSearchManager = new KeypadSearchManager(new KeypadSearchManager.InputContent() {
@@ -111,7 +113,7 @@ public class KeypadView extends LinearLayout {
 
     private void refreshResultShow(List<KeypadItem> items) {
         resultView.removeAllViews();
-        if (items != null && items.size() > 0) {
+        if (items.size() > 0) {
             for (KeypadItem item : items) {
                 Button btn = new Button(getContext());
                 btn.setText(item.getWord());
